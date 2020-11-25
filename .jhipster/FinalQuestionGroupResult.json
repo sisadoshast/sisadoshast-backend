@@ -1,0 +1,39 @@
+{
+    "name": "FinalQuestionGroupResult",
+    "fields": [
+        {
+            "fieldName": "avrageQuestionGroupResult",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "weight",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "questionGroup",
+            "otherEntityRelationshipName": "questionGroupResult",
+            "relationshipName": "questionGroup",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "finalResult",
+            "otherEntityRelationshipName": "questionGroupResulte",
+            "relationshipName": "finalResult",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20201125131200",
+    "entityTableName": "final_question_group_result",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

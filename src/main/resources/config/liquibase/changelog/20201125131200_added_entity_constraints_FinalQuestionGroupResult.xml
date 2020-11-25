@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity FinalQuestionGroupResult.
+    -->
+    <changeSet id="20201125131200-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="question_group_id"
+                                 baseTableName="final_question_group_result"
+                                 constraintName="fk_final_question_group_result_question_group_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="question_group"/>
+
+        <addForeignKeyConstraint baseColumnNames="final_result_id"
+                                 baseTableName="final_question_group_result"
+                                 constraintName="fk_final_question_group_result_final_result_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="final_result"/>
+
+    </changeSet>
+</databaseChangeLog>

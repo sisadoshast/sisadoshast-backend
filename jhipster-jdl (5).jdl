@@ -1,0 +1,77 @@
+
+
+
+entity Organization {
+	name String 
+    
+}
+entity Department{
+    name String
+
+}
+
+entity Employee{
+	name String,
+    personalNumber String,
+    weight Integer
+
+}
+
+entity Group{
+	name String
+}
+
+entity QuestionGroup{
+		name String,
+        order Integer,
+        weight Integer
+        
+}
+
+entity Question{
+        description String,
+        weight Integer
+}
+
+
+entity ResulteQuestion{
+       employeeWeight Integer,
+       result Integer
+       
+}
+entity FinalResult{
+	avrageResult Integer
+	   
+}
+entity FinalQuestionGroupResult{
+	avrageQuestionGroupResult Integer,
+    weight Integer
+	   
+}
+entity Period {
+	start Instant,
+    end Instant,
+    state PeriodStatus
+}
+enum PeriodStatus {
+	NOT_START, INPROGRESS , END
+}
+
+relationship OneToMany {
+	Organization{departments} to Department,
+    QuestionGroup{question} to Question
+  	Employee{voter} to ResulteQuestion{employeeVoter},
+    Employee{owner} to ResulteQuestion{employeeOwner},
+    Question{result} to ResulteQuestion,
+    Employee{result} to FinalResult,
+    Period{finalResult} to FinalResult,
+    QuestionGroup{questionGroupResult} to FinalQuestionGroupResult,
+    FinalResult{questionGroupResulte} to FinalQuestionGroupResult,
+    Period{questions} to Question
+    
+}
+relationship ManyToMany{
+	Department{employee} to Employee{department},
+	Employee {group} to Group{group}
+}
+

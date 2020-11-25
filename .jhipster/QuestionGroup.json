@@ -1,0 +1,41 @@
+{
+    "name": "QuestionGroup",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "order",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "weight",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "question",
+            "otherEntityRelationshipName": "questionGroup",
+            "relationshipName": "question"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "finalQuestionGroupResult",
+            "otherEntityRelationshipName": "questionGroup",
+            "relationshipName": "questionGroupResult"
+        }
+    ],
+    "changelogDate": "20201125130800",
+    "entityTableName": "question_group",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

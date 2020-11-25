@@ -1,0 +1,36 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.sisadoshast"
+    },
+    "jhipsterVersion": "6.7.1",
+    "applicationType": "monolith",
+    "baseName": "360",
+    "packageName": "com.sisadoshast",
+    "packageFolder": "com/sisadoshast",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NGUxZGQ2ODQ4MWRjZTAzOWU4Yjc2ZjFjNzU4ZDMxZGFmM2E2ODllZWY4MjZlOWUxOGRhMGMwMzkzYjlmMDZlMDQwMzVjMzQzMzAzYmZjMjU0M2JmM2JlNDJlMWIxYzExYjFjNWVlOWVlNWE5MmM3YjA2NTI5M2QxYTcwYTFjYjM=",
+    "embeddableLaunchScript": false,
+    "creationTimestamp": 1606309299459,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true
+  }
+}

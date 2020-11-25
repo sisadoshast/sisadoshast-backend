@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity Department.
+    -->
+    <changeSet id="20201125130500-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="department_id"
+                                 baseTableName="department_employee"
+                                 constraintName="fk_department_employee_department_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="department"/>
+
+        <addForeignKeyConstraint baseColumnNames="employee_id"
+                                 baseTableName="department_employee"
+                                 constraintName="fk_department_employee_employee_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="employee"/>
+        
+        <addForeignKeyConstraint baseColumnNames="organization_id"
+                                 baseTableName="department"
+                                 constraintName="fk_department_organization_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="organization"/>
+
+    </changeSet>
+</databaseChangeLog>

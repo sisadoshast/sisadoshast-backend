@@ -1,0 +1,42 @@
+{
+    "name": "Period",
+    "fields": [
+        {
+            "fieldName": "start",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "end",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "state",
+            "fieldType": "PeriodStatus",
+            "fieldValues": "NOT_START,INPROGRESS,END"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "finalResult",
+            "otherEntityRelationshipName": "period",
+            "relationshipName": "finalResult"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "question",
+            "otherEntityRelationshipName": "period",
+            "relationshipName": "questions"
+        }
+    ],
+    "changelogDate": "20201125131300",
+    "entityTableName": "period",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

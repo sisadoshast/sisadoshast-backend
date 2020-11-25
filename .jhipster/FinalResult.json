@@ -1,0 +1,41 @@
+{
+    "name": "FinalResult",
+    "fields": [
+        {
+            "fieldName": "avrageResult",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "finalQuestionGroupResult",
+            "otherEntityRelationshipName": "finalResult",
+            "relationshipName": "questionGroupResulte"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "employee",
+            "otherEntityRelationshipName": "result",
+            "relationshipName": "employee",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "period",
+            "otherEntityRelationshipName": "finalResult",
+            "relationshipName": "period",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20201125131100",
+    "entityTableName": "final_result",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

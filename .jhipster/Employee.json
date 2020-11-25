@@ -1,0 +1,63 @@
+{
+    "name": "Employee",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "personalNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "weight",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "resulteQuestion",
+            "otherEntityRelationshipName": "employeeVoter",
+            "relationshipName": "voter"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "resulteQuestion",
+            "otherEntityRelationshipName": "employeeOwner",
+            "relationshipName": "owner"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "finalResult",
+            "otherEntityRelationshipName": "employee",
+            "relationshipName": "result"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "group",
+            "otherEntityRelationshipName": "group",
+            "relationshipName": "group",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "department",
+            "otherEntityRelationshipName": "employee",
+            "relationshipName": "department",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20201125130600",
+    "entityTableName": "employee",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
